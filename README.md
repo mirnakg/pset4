@@ -48,7 +48,7 @@ Fold change in protein abundance for one of two Biofilm replicates (replicate 1)
 ## Steps to reproduce figure:
 ### Method 1:
 1) Download this repository
-2) Run python code proteomics_common_Ecoli.py, this will generate a table of proteins common between the two datasets and saves common protein list along with fold changes in persistor and biofilm populations as an excel sheet in the data folder.
+2) Run python code *proteomics_common_Ecoli.py*, this will generate a table of proteins common between the two datasets and saves common protein list along with fold changes in persistor and biofilm populations as an excel sheet in the data folder.
 3) Open excel file generated from python code and create a new sheet with data organized such that each fold_change value is associated with a protein and a population type (This is the format needed for the matlab code to work- see *persister_biofilm_common.xls* file for example ):
 
 Here is a short example:
