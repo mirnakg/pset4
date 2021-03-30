@@ -29,7 +29,8 @@ https://pubs.acs.org/doi/abs/10.1021/acs.jproteome.8b00625?casa_token=vsL9GqC__d
 
 Data was copied into an excel sheet (persister_TableS4.xls) for analysis.
 Fold change in protein abundance data was copied in a separate sheet in the same excel file for further processing, sheet was named "fold_change_data".
-    ---------------------------------------------------------------------
+
+
 _Biofilm data was included as an excel sheet (iTRAQ_data_of_MG1655_Biofilm_Vs_Planktonic.xls) in the supplementary material of the following publication:_ 
 
 Quantitative protein expression and cell surface characteristics of Escherichia coli MG1655 biofilms
@@ -46,26 +47,26 @@ Fold change in protein abundance for one of two Biofilm replicates (replicate 1)
 
 ## Steps to reproduce figure:
 ### Method 1:
-- 1) Download this repository
-- 2) Run python code proteomics_common_Ecoli.py, this will generate a table of proteins common between the two datasets and saves common protein list along with fold changes in persistor and biofilm populations as an excel sheet in the data folder.
-- 3) Open excel file generated from python code and create a new sheet with data organized such that each fold_change value is associated with a protein and a population type (This is the format needed for the matlab code to work- see persister_biofilm_common.xls file for example ):
+1) Download this repository
+2) Run python code proteomics_common_Ecoli.py, this will generate a table of proteins common between the two datasets and saves common protein list along with fold changes in persistor and biofilm populations as an excel sheet in the data folder.
+3) Open excel file generated from python code and create a new sheet with data organized such that each fold_change value is associated with a protein and a population type (This is the format needed for the matlab code to work- see persister_biofilm_common.xls file for example ):
 Here is a short example:
-Protein | fold_change | Type |
-------- | ----------- | ---- |
+| Protein | fold_change | Type |
+| ------- | ----------- | ---- |
 
-P0AEE5 | 0.539905976 | Biofilm
-P0A7K2 | 0.689601615 | Biofilm
-P0AD49 | 0.73681559  | Biofilm
-P02359 | 0.795256144 | Biofilm
-P0AEE5 | 0.28 |	Persister
-P0A7K2 | 2.03 | Persister
-P0AD49 | 0.29 | Persister
-P02359 | 2.01 | Persister
+| P0AEE5 | 0.539905976 | Biofilm | 
+| P0A7K2 | 0.689601615 | Biofilm |
+| P0AD49 | 0.73681559  | Biofilm |
+| P02359 | 0.795256144 | Biofilm |
+| P0AEE5 | 0.28 | Persister |
+| P0A7K2 | 2.03 | Persister |
+| P0AD49 | 0.29 | Persister |
+| P02359 | 2.01 | Persister |
 
 
-- 4) open matlab code common_protein_heatmap.mat
-- 5) In Matlab, import data from the sheet in #3
-- 6) run matlab code, figure will be generated and can be saved through the matlab figure IDE.
+4) open matlab code common_protein_heatmap.mat
+5) In Matlab, import data from the sheet in #3
+6) run matlab code, figure will be generated and can be saved through the matlab figure IDE.
 
 Note: In the following Matlab line variable names will vary based on what you name your folder, columns in excel sheet...etc., see matlab heatmap documentation for further help https://www.mathworks.com/help/matlab/ref/heatmap.html: 
 '<heatmap(persisterbiofilmcommonS1, 'type','Protein', 'ColorVariable', 'fold_change', 'colormap', hot, 'GridVisible', 'off')>'
@@ -74,10 +75,10 @@ Note: In the following Matlab line variable names will vary based on what you na
 
 
 ### Method 2:
-- 1) Download this repository
-- 2) open matlab code common_protein_heatmap.mat
-- 3) open common_protein_heatmap_MATLABdata.m
-- 4) Run matlab code, figure will be generated and can be saved through the matlab figure IDE.
+1) Download this repository
+2) open matlab code common_protein_heatmap.mat
+3) open common_protein_heatmap_MATLABdata.m
+4) Run matlab code, figure will be generated and can be saved through the matlab figure IDE.
 Note: In the following Matlab line variable names will vary based on what you name your folder, columns in excel sheet...etc., see matlab heatmap documentation for further help https://www.mathworks.com/help/matlab/ref/heatmap.html: 
 '<heatmap(persisterbiofilmcommonS1, 'type','Protein', 'ColorVariable', 'fold_change', 'colormap', hot, 'GridVisible', 'off')>'
 
