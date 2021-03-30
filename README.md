@@ -10,15 +10,15 @@ See project background here: https://docs.google.com/document/d/1bJdGNSJAJV1m0In
 - *common_protein_heatmap.mat* matlab code used to generate heatmap based on data obtained from *proteomics_common_Ecoli.py* python code.
 
 **Data folder**: contains published data needed to produce figure, see data section in this README.md.
-*persister_biofilm_common.xls* is obtained from python code described above and contains common protein list along with fold changes in persistor and biofilm populations
-*common_protein_heatmap_MATLABdata.m* in this folder that can be used directly with the MATLAB code in the code folder to produce figure.
+- *persister_biofilm_common.xls* is obtained from python code described above and contains common protein list along with fold changes in persistor and biofilm populations
+- *common_protein_heatmap_MATLABdata.m* in this folder that can be used directly with the MATLAB code in the code folder to produce figure.
 
 **Figures folder**: contains MATLAB figure that is to be reproduced for reference.
 
 
 ## Data
 
-The data used are stored in the data folder of this repository.
+The data used are stored in the **data folder** of this repository.
 
 We will be using processed proteomics datasets from two different papers that both worked with the same strain of E. coli K-12 (MG1655). The first paper enriched for persister cells through rifampin pretreatment followed by ampicillin exposure. Then, spectral counting proteomics was used to compare different abundances of proteins between persister-enriched and normal populations.  The second paper used quantitative proteomics (iTRAQ) to identify proteins differentially expressed in biofilm versus planktonic cultures. 
 
