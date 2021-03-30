@@ -26,10 +26,10 @@ Persister data was included in table S4 of the supplementary material PDF of the
 Specific Enrichment and Proteomics Analysis of Escherichia coli Persisters from Rifampin Pretreatment 
 https://pubs.acs.org/doi/abs/10.1021/acs.jproteome.8b00625?casa_token=vsL9GqC__d4AAAAA:DUfGwSPD9KtqG9TCss5VKkSihurtYCVsBK1SrPoWY54Zh2keJMdSMPCH0K5C6mUyTFSXjzNsjDl4mIy9
 
-Data was copied into an excel sheet for analysis.
+Data was copied into an excel sheet (persister_TableS4.xls) for analysis.
 Fold change in protein abundance data was copied in a separate sheet in the same excel file for further processing, sheet was named "fold_change_data".
 
-Biofilm data was included as an excel sheet in the supplementary material of the following publication:
+Biofilm data was included as an excel sheet (iTRAQ_data_of_MG1655_Biofilm_Vs_Planktonic.xls) in the supplementary material of the following publication:
 Quantitative protein expression and cell surface characteristics of Escherichia coli MG1655 biofilms
 https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/full/10.1002/pmic.201000386?casa_token=_YDS83Fbm-QAAAAA%3AQEAXau3pENSFdISUAM7rD59O_mcEfP0VuqYSyZu5WehFhwQu5UCjePo_H0u2ll5HZdY2BX6YtjjSCrfF
 
@@ -46,26 +46,13 @@ Steps to reproduce figure:
 Method 1:
 1) Download this repository
 2) Run python code proteomics_common_Ecoli.py, this will generate a table of proteins common between the two datasets and saves common protein list along with fold changes in persistor and biofilm populations as an excel sheet in the data folder.
-3) Open excel file generated from python code and create a new sheet where data is organized a follows (This is the format needed for the matlab code to work):
-Each fold_change value is associated with a protein and a poplation type 
-
-Protein	fold_change	type
-P0AEE5	0.539905976	Biofilm
-P0A7K2	0.689601615	Biofilm
-P0AD49	0.73681559	Biofilm
-
-.....
-
-P0ABH7	0.27	Persister
-P21599	0.36	Persister
-P37330	0.18	Persister
-
+3) Open excel file generated from python code and create a new sheet where data is such that each fold_change value is associated with a protein and a population type (This is the format needed for the matlab code to work- see persister_biofilm_common.xls file for example ):
 
 4) open matlab code common_protein_heatmap.mat
 5) In Matlab, import data from the sheet in #3
 6) run matlab code, figure will be generated and can be saved through the matlab figure IDE.
 
-Note: In the following Matlab line variable names will vary based on what you name your folder, columns in excel sheet...etc., see matlab heatmap documentation for further help: 
+Note: In the following Matlab line variable names will vary based on what you name your folder, columns in excel sheet...etc., see matlab heatmap documentation for further help https://www.mathworks.com/help/matlab/ref/heatmap.html: 
 heatmap(persisterbiofilmcommonS1, 'type','Protein', 'ColorVariable', 'fold_change', 'colormap', hot, 'GridVisible', 'off')
 
 
@@ -76,7 +63,7 @@ Method 2:
 2) open matlab code common_protein_heatmap.mat
 3) open common_protein_heatmap_MATLABdata.m
 4) Run matlab code, figure will be generated and can be saved through the matlab figure IDE.
-Note: In the following Matlab line variable names will vary based on what you name your folder, columns in excel sheet...etc., see matlab heatmap documentation for further help: 
+Note: In the following Matlab line variable names will vary based on what you name your folder, columns in excel sheet...etc., see matlab heatmap documentation for further help https://www.mathworks.com/help/matlab/ref/heatmap.html: 
 heatmap(persisterbiofilmcommonS1, 'type','Protein', 'ColorVariable', 'fold_change', 'colormap', hot, 'GridVisible', 'off')
 
 
