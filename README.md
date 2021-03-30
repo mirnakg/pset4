@@ -54,10 +54,10 @@ Here is a short example:
 | Protein | fold_change | Type |
 | ------- | ----------- | ---- |
 
-| P0AEE5 | 0.539905976 | Biofilm | 
-| P0A7K2 | 0.689601615 | Biofilm |
-| P0AD49 | 0.73681559  | Biofilm |
-| P02359 | 0.795256144 | Biofilm |
+| P0AEE5 | 0.53 | Biofilm | 
+| P0A7K2 | 0.68 | Biofilm |
+| P0AD49 | 0.73 | Biofilm |
+| P02359 | 0.79 | Biofilm |
 | P0AEE5 | 0.28 | Persister |
 | P0A7K2 | 2.03 | Persister |
 | P0AD49 | 0.29 | Persister |
@@ -69,7 +69,12 @@ Here is a short example:
 6) run matlab code, figure will be generated and can be saved through the matlab figure IDE.
 
 Note: In the following Matlab line variable names will vary based on what you name your folder, columns in excel sheet...etc., see matlab heatmap documentation for further help https://www.mathworks.com/help/matlab/ref/heatmap.html: 
-'<heatmap(persisterbiofilmcommonS1, 'type','Protein', 'ColorVariable', 'fold_change', 'colormap', hot, 'GridVisible', 'off')>'
+```
+{ 
+    heatmap(persisterbiofilmcommonS1, 'type','Protein', 'ColorVariable', 'fold_change', 'colormap', hot, 'GridVisible', 'off')>'
+
+}
+```
 
 
 
@@ -80,8 +85,11 @@ Note: In the following Matlab line variable names will vary based on what you na
 3) open common_protein_heatmap_MATLABdata.m
 4) Run matlab code, figure will be generated and can be saved through the matlab figure IDE.
 Note: In the following Matlab line variable names will vary based on what you name your folder, columns in excel sheet...etc., see matlab heatmap documentation for further help https://www.mathworks.com/help/matlab/ref/heatmap.html: 
-'<heatmap(persisterbiofilmcommonS1, 'type','Protein', 'ColorVariable', 'fold_change', 'colormap', hot, 'GridVisible', 'off')>'
-
+```
+{ 
+    heatmap(persisterbiofilmcommonS1, 'type','Protein', 'ColorVariable', 'fold_change', 'colormap', hot, 'GridVisible', 'off')>'
+}
+```
 
 
 
