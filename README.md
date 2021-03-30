@@ -6,8 +6,8 @@ See project background here: https://docs.google.com/document/d/1bJdGNSJAJV1m0In
 ## Folder structure
 
 **Code folder**: contains python and matlab code to generate figure
-proteomics_common_Ecoli.py python code used to generate a table of proteins common between the two datasets and saves common protein list along with fold changes in persister and biofilm populations as an excel sheet in the **data folder**.
-common_protein_heatmap.mat matlab code used to generate heatmap based on data obtained from proteomics_common_Ecoli.py python code.
+- *proteomics_common_Ecoli.py* python code used to generate a table of proteins common between the two datasets and saves common protein list along with fold changes in persister and biofilm populations as an excel sheet in the **data folder**.
+- *common_protein_heatmap.mat* matlab code used to generate heatmap based on data obtained from *proteomics_common_Ecoli.py* python code.
 
 **Data folder**: contains published data needed to produce figure, see data section in this README.md.
 *persister_biofilm_common.xls* is obtained from python code described above and contains common protein list along with fold changes in persistor and biofilm populations
