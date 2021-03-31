@@ -1,0 +1,30 @@
+# based on : https://github.com/alexkaratarakis/gitattributes/blob/master/Common.gitattributes
+# and https://github.com/aemcshane/20440/blob/master/.gitattributes
+# Common settings that generally should always be used with 
+# your language specific settings
+
+# Auto detect text files and perform LF normalization
+# https://www.davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
+*          text=auto
+
+#
+# The above will handle all files NOT found below
+#
+
+
+
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.gitattributes text
+.gitignore      text
+*.md            text diff=markdown
+#
+# Exclude files from exporting
+#
+
+.gitattributes export-ignore
+.gitignore     export-ignore
+
+# Enable syntax highlighting for files with `.gitattributes` extensions.
+#
+*.gitattributes linguist-language=gitattributes

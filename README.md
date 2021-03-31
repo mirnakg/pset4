@@ -9,7 +9,8 @@ See project background here: https://docs.google.com/document/d/1bJdGNSJAJV1m0In
 - *proteomics_common_Ecoli.py* python code used to generate a table of proteins common between the two datasets and saves common protein list along with fold changes in persister and biofilm populations as an excel sheet in the **data folder**.
 - *common_protein_heatmap.mat* matlab code used to generate heatmap based on data obtained from *proteomics_common_Ecoli.py* python code.
 
-**Data folder**: contains published data needed to produce figure, see data section in this README.md.
+**Data folder**: contains the following:
+- published data needed to produce figure, see data section in this README.md.
 - *persister_biofilm_common.xls* is obtained from python code described above and contains common protein list along with fold changes in persistor and biofilm populations
 - *common_protein_heatmap_MATLABdata.m* in this folder that can be used directly with the MATLAB code in the code folder to produce figure.
 
@@ -41,9 +42,10 @@ Fold change in protein abundance for one of two Biofilm replicates (replicate 1)
 
 ## Installation
 ### To run the code you need: 
-- Python 3.x
+- Python 3.xx
 - python package: pandas
 - MATLAB_R2020b
+- Microsoft Excel
 
 ## Steps to reproduce figure:
 ### Method 1:
